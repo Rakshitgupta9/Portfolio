@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshit | Projects</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <span class="nav-logo">Rakshit Gupta</span>
+            <ul class="nav-links">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li>
+                    <button class="social-dropdown-btn" tabindex="0">
+                        Social
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="social-dropdown">
+                        <a class="social-link" href="https://github.com/Rakshitgupta9" target="_blank" rel="noopener">
+                            GitHub
+                        </a>
+                        <a class="social-link" href="https://leetcode.com/u/rakshitgupta9/" target="_blank"
+                            rel="noopener">
+                            LeetCode
+                        </a>
+                        <a class="social-link" href="mailto:guptarakshit9858@gmail.com" target="_blank" rel="noopener">
+                            Mail
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/rakshit9/" target="_blank"
+                            rel="noopener">
+                            LinkedIn
+                        </a>
+                        <a class="social-link" href="https://www.instagram.com/rakshit9_/" target="_blank"
+                            rel="noopener">
+                            Instagram
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="projects" id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <a class="project-card" href="../projects/project6.html">
+                    <h3>AgeWell - A Smart Portal for Senior Citizen Support</h3>
+                    <p>AgeWell is a comprehensive web-based platform designed to empower elderly individuals by
+                        providing an intuitive interface for managing their social, financial, and health-related needs.
+                    </p>
+                </a>
+                <a class="project-card" href="../projects/project1.html">
+                    <h3>Smart IoT-Based Parking Management System</h3>
+                    <p>Smart IoT Parking System using ESP32-CAM, real-time ANPR, servo control, and a web interface.</p>
+                </a>
+                <a class="project-card" href="../projects/project2.html">
+                    <h3>Bus Route Management System Using A* Algorithm</h3>
+                    <p>Bus Route Management System using A* algorithm, Flask, MongoDB, and Leaflet.js for map-based
+                        bookings and dynamic pricing.</p>
+                </a>
+                <a class="project-card" href="../projects/project3.html">
+                    <h3>Health Companion</h3>
+                    <p>User-friendly web app using ML to predict health conditions and provide insights. Built with
+                        Flask, MySQL, and ML models.</p>
+                </a>
+                <a class="project-card" href="../projects/project5.html">
+                    <h3>Zinnger - Restaurant Landing Page</h3>
+                    <p>Developed a responsive and user-friendly "Zinnger - Restaurant Landing Page". Features include a
+                        dynamic menu, table booking, and admin portal, showcasing proficiency in HTML, CSS, JavaScript,
+                        PHP, and MySQL.</p>
+                </a>
+                <a class="project-card" href="../projects/project4.html">
+                    <h3>Test Platform using Linux</h3>
+                    <p>Login-based Online Test Platform using Linux shell scripting, pattern-matching, and file
+                        handling. Randomized questions and timed tests.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 Rakshit Gupta. All rights reserved.</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:guptarakshit9858@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        guptarakshit9858@gmail.com
+                    </a>
+                    <a href="tel:+919086304908" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        +91 9086304908
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab">
+        <a href="#top" class="fab-button">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript for enhanced functionality -->
+    <script>
+        // Floating Action Button visibility
+        window.addEventListener('scroll', function () {
+            const fab = document.querySelector('.fab');
+            if (window.scrollY > 300) {
+                fab.classList.add('show');
+            } else {
+                fab.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

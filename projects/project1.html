@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One | Rakshit Gupta</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <span class="nav-logo">Rakshit Gupta</span>
+            <ul class="nav-links">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="../pages/projects.html" class="active">Projects</a></li>
+                <li><a href="../pages/resume.html">Resume</a></li>
+                <li>
+                    <button class="social-dropdown-btn" tabindex="0">
+                        Social
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="social-dropdown">
+                        <a class="social-link" href="https://github.com/Rakshitgupta9" target="_blank" rel="noopener">
+                            GitHub
+                        </a>
+                        <a class="social-link" href="https://leetcode.com/u/rakshitgupta9/" target="_blank"
+                            rel="noopener">
+                            LeetCode
+                        </a>
+                        <a class="social-link" href="mailto:guptarakshit9858@gmail.com" target="_blank" rel="noopener">
+                            Mail
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/rakshit9/" target="_blank"
+                            rel="noopener">
+                            LinkedIn
+                        </a>
+                        <a class="social-link" href="https://www.instagram.com/rakshit9_/" target="_blank"
+                            rel="noopener">
+                            Instagram
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="project-detail">
+            <h2 style="font-size:2.5rem; margin-bottom:18px;">Smart IoT-Based Parking Management System Using ESP32-CAM
+                and Custom ANPR Model</h2>
+            <a href="https://github.com/Rakshitgupta9/Smart-Parking-Management" target="_blank" rel="noopener"
+                class="download-btn" style="margin-bottom: 28px; display: inline-block; font-size: 1.1rem;">View on
+                GitHub <i class="fab fa-github"></i></a>
+            <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Project Overview</h3>
+            <p style="font-size:1.18rem; line-height:1.7;">The Smart Parking Management project is an IoT-based solution
+                designed to automate vehicle parking processes using the ESP32-CAM module and Automatic Number Plate
+                Recognition (ANPR). The system captures vehicle images, sends them to a local server for number plate
+                recognition, and controls access using IR sensors and a servo motor. A web interface provides real-time
+                status updates, including time, system status, and recognized number plates. The project integrates
+                hardware (ESP32-CAM, IR sensors, servo motor, flashlight) and software (ANPR model, local server) to
+                create an efficient parking management system suitable for small-scale parking lots.</p>
+            <p style="font-size:1.18rem; line-height:1.7;">This repository contains all the code, documentation, and
+                resources needed to replicate the project, including ESP32 firmware, server-side code, ANPR model,
+                testing scripts, and circuit diagrams.</p>
+            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">Key Components</h3>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h4>ESP32-CAM</h4>
+                    <ul>
+                        <li>Microcontroller with OV2640 camera module</li>
+                        <li>Captures vehicle images</li>
+                        <li>Hosts web server for status monitoring</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>IR Sensors</h4>
+                    <ul>
+                        <li>Two infrared sensors for entry (GPIO 16) and exit (GPIO 15)</li>
+                        <li>Detect vehicle movement</li>
+                        <li>Trigger image capture and servo actions</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Servo Motor</h4>
+                    <ul>
+                        <li>Controls gate mechanism</li>
+                        <li>Toggles between 0Â° and 90Â° based on entry IR sensor</li>
+                        <li>Connected to GPIO 14</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Flashlight</h4>
+                    <ul>
+                        <li>LED on GPIO 4</li>
+                        <li>Illuminates scene during image capture</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Local Server</h4>
+                    <ul>
+                        <li>Flask-based server (192.168.29.56:5000/upload)</li>
+                        <li>Processes images and performs ANPR</li>
+                        <li>Returns JSON with number plate and image URL</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>ANPR Model</h4>
+                    <ul>
+                        <li>Jupyter Notebook (anpr.ipynb)</li>
+                        <li>Implements Automatic Number Plate Recognition</li>
+                        <li>Uses computer vision techniques</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Web Interface</h4>
+                    <ul>
+                        <li>HTML interface served by ESP32-CAM</li>
+                        <li>Displays real-time system status, time, last event, and captured images</li>
+                    </ul>
+                </div>
+            </div>
+            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">Components</h3>
+            <div class="tech-slider">
+                <div class="tech-track">
+                    <div class="tech-card">ESP32-CAM</div>
+                    <div class="tech-card">IR Sensors</div>
+                    <div class="tech-card">Servo Motor</div>
+                    <div class="tech-card">Flashlight</div>
+                    <div class="tech-card">Breadboard</div>
+                    <div class="tech-card">Jumper wires</div>
+                </div>
+            </div>
+            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">Tech Stack</h3>
+            <div class="tech-slider">
+                <div class="tech-track">
+                    <div class="tech-card">Python</div>
+                    <div class="tech-card">OpenCV</div>
+                    <div class="tech-card">Arduino IDE</div>
+                    <div class="tech-card">Cloud Server</div>
+                    <div class="tech-card">ANPR Jupyter Notebook</div>
+                    <div class="tech-card">MongoDB</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 Rakshit Gupta. All rights reserved.</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:guptarakshit9858@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        guptarakshit9858@gmail.com
+                    </a>
+                    <a href="tel:+919086304908" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        +91 9086304908
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab">
+        <a href="#top" class="fab-button">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript for enhanced functionality -->
+    <script>
+        // Floating Action Button visibility
+        window.addEventListener('scroll', function () {
+            const fab = document.querySelector('.fab');
+            if (window.scrollY > 300) {
+                fab.classList.add('show');
+            } else {
+                fab.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
