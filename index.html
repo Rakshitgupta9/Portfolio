@@ -100,6 +100,13 @@
                     <div class="stat-number">8.48</div>
                     <div class="stat-label">CGPA</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" id="visitor-count">0</div>
+                    <div class="stat-label">Visitors</div>
+                </div>
             </div>
         </section>
 
@@ -107,65 +114,81 @@
             <h2>Technical Skills</h2>
             <div class="skills-slider">
                 <div class="skills-track">
+
                     <div class="skill-card">
                         <i class="fas fa-c"></i>
                         <h3>C Programming</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fas fa-c"></i>
                         <h3>C++</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-python"></i>
                         <h3>Python</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-python"></i>
                         <h3>Flask</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fas fa-database"></i>
                         <h3>MySQL</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fas fa-database"></i>
                         <h3>MongoDB</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-html5"></i>
                         <h3>HTML5</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-css3-alt"></i>
                         <h3>CSS3</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-js-square"></i>
                         <h3>JavaScript</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-php"></i>
                         <h3>PHP</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fab fa-linux"></i>
                         <h3>Linux</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fas fa-terminal"></i>
                         <h3>Shell Scripting</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fas fa-robot"></i>
                         <h3>UiPath</h3>
                     </div>
+
                     <div class="skill-card">
                         <i class="fas fa-microchip"></i>
                         <h3>Arduino</h3>
                     </div>
+
                 </div>
             </div>
         </section>
+
 
         <section class="internships-section">
             <h2>Internships</h2>
@@ -306,6 +329,37 @@
                 }
             });
         });
+
+        // Visitor Counter functionality
+        function initVisitorCounter() {
+            const visitorCountElement = document.getElementById('visitor-count');
+
+            // Check if this is a new session
+            const hasVisitedThisSession = sessionStorage.getItem('hasVisited');
+
+            if (!hasVisitedThisSession) {
+                // New session - increment the visitor count
+                let visitorCount = localStorage.getItem('visitorCount');
+                visitorCount = visitorCount ? parseInt(visitorCount) + 169 : 1;
+                localStorage.setItem('visitorCount', visitorCount);
+                sessionStorage.setItem('hasVisited', 'true');
+            }
+
+            // Display the current visitor count
+            const currentCount = localStorage.getItem('visitorCount') || 0;
+            visitorCountElement.textContent = currentCount;
+
+            // Add a subtle animation to the counter
+            setTimeout(() => {
+                visitorCountElement.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    visitorCountElement.style.transform = 'scale(1)';
+                }, 200);
+            }, 500);
+        }
+
+        // Initialize visitor counter when page loads
+        document.addEventListener('DOMContentLoaded', initVisitorCounter);
 
         // Add scroll animations
         const observerOptions = {
