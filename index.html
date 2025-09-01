@@ -330,32 +330,51 @@
             });
         });
 
-        // Visitor Counter functionality
-        function initVisitorCounter() {
+        // Visitor Counter functionality with MongoDB
+        async function initVisitorCounter() {
             const visitorCountElement = document.getElementById('visitor-count');
 
-            // Check if this is a new session
-            const hasVisitedThisSession = sessionStorage.getItem('hasVisited');
+            try {
+                // Check if this is a new session
+                const hasVisitedThisSession = sessionStorage.getItem('hasVisited');
 
-            if (!hasVisitedThisSession) {
-                // New session - increment the visitor count
-                let visitorCount = localStorage.getItem('visitorCount');
-                visitorCount = visitorCount ? parseInt(visitorCount) + 1 : 1;
-                localStorage.setItem('visitorCount', visitorCount);
-                sessionStorage.setItem('hasVisited', 'true');
+                if (!hasVisitedThisSession) {
+                    // New session - increment the visitor count in MongoDB
+                    const response = await fetch('/api/visitors/increment', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        visitorCountElement.textContent = data.count;
+                        sessionStorage.setItem('hasVisited', 'true');
+
+                        // Add a subtle animation to the counter
+                        setTimeout(() => {
+                            visitorCountElement.style.transform = 'scale(1.1)';
+                            setTimeout(() => {
+                                visitorCountElement.style.transform = 'scale(1)';
+                            }, 200);
+                        }, 500);
+                    } else {
+                        throw new Error('Failed to increment visitor count');
+                    }
+                } else {
+                    // Session already counted, just fetch and display current count
+                    const response = await fetch('/api/visitors');
+                    if (response.ok) {
+                        const data = await response.json();
+                        visitorCountElement.textContent = data.count;
+                    }
+                }
+            } catch (error) {
+                console.error('Error with visitor counter:', error);
+                // Fallback to showing a default value
+                visitorCountElement.textContent = '0';
             }
-
-            // Display the current visitor count
-            const currentCount = localStorage.getItem('visitorCount') || 0;
-            visitorCountElement.textContent = currentCount;
-
-            // Add a subtle animation to the counter
-            setTimeout(() => {
-                visitorCountElement.style.transform = 'scale(1.1)';
-                setTimeout(() => {
-                    visitorCountElement.style.transform = 'scale(1)';
-                }, 200);
-            }, 500);
         }
 
         // Initialize visitor counter when page loads
