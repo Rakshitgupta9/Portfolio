@@ -100,13 +100,7 @@
                     <div class="stat-number">8.48</div>
                     <div class="stat-label">CGPA</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="stat-number" id="visitor-count">0</div>
-                    <div class="stat-label">Visitors</div>
-                </div>
+
             </div>
         </section>
 
@@ -330,55 +324,7 @@
             });
         });
 
-        // Visitor Counter functionality with MongoDB
-        async function initVisitorCounter() {
-            const visitorCountElement = document.getElementById('visitor-count');
 
-            try {
-                // Check if this is a new session
-                const hasVisitedThisSession = sessionStorage.getItem('hasVisited');
-
-                if (!hasVisitedThisSession) {
-                    // New session - increment the visitor count in MongoDB
-                    const response = await fetch('/api/visitors/increment', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    });
-
-                    if (response.ok) {
-                        const data = await response.json();
-                        visitorCountElement.textContent = data.count;
-                        sessionStorage.setItem('hasVisited', 'true');
-
-                        // Add a subtle animation to the counter
-                        setTimeout(() => {
-                            visitorCountElement.style.transform = 'scale(1.1)';
-                            setTimeout(() => {
-                                visitorCountElement.style.transform = 'scale(1)';
-                            }, 200);
-                        }, 500);
-                    } else {
-                        throw new Error('Failed to increment visitor count');
-                    }
-                } else {
-                    // Session already counted, just fetch and display current count
-                    const response = await fetch('/api/visitors');
-                    if (response.ok) {
-                        const data = await response.json();
-                        visitorCountElement.textContent = data.count;
-                    }
-                }
-            } catch (error) {
-                console.error('Error with visitor counter:', error);
-                // Fallback to showing a default value
-                visitorCountElement.textContent = '0';
-            }
-        }
-
-        // Initialize visitor counter when page loads
-        document.addEventListener('DOMContentLoaded', initVisitorCounter);
 
         // Add scroll animations
         const observerOptions = {
