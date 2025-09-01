@@ -510,6 +510,7 @@ h2::after {
     color: var(--primary-color);
     margin-bottom: 8px;
     line-height: 1;
+    transition: transform 0.2s ease;
 }
 
 .stat-label {
@@ -1014,6 +1015,7 @@ h2::after {
     color: var(--primary-color);
     width: 20px;
 }
+
 
 .skills-list {
     display: flex;
