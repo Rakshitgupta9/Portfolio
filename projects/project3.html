@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,52 +48,222 @@
         </div>
     </nav>
     <main class="container">
-        <section class="project-detail" style="max-width:900px; margin:0 auto;">
-            <h2 style="font-size:2.5rem; margin-bottom:18px;">🏥 Health Companion</h2>
-            <a href="https://github.com/Rakshitgupta9/Health-Companion" target="_blank" rel="noopener"
+        <section class="project-detail">
+            <h2 style="font-size:2.5rem; margin-bottom:18px;">🎤 Text to Speech Configurator</h2>
+            <a href="https://github.com/Rakshitgupta9/Text-to-Speech-Configurator" target="_blank" rel="noopener"
                 class="download-btn" style="margin-bottom: 28px; display: inline-block; font-size: 1.1rem;">View on
                 GitHub <i class="fab fa-github"></i></a>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">📋 Introduction</h3>
-            <p style="font-size:1.18rem; line-height:1.7;">Health Companion is a web application designed to help users
-                monitor and predict their risk for certain health conditions using machine learning algorithms. The
-                application is user-friendly and provides detailed information and insights based on user input.</p>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">✨ Features</h3>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <h4>🔮 Disease Prediction</h4>
-                    <ul>
-                        <li>Predicts the risk of stroke, cardiovascular diseases, and diabetes.</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>⚖️ BMI Calculator</h4>
-                    <ul>
-                        <li>Calculates Body Mass Index (BMI) based on height and weight.</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>🔥 Calorie Calculator</h4>
-                    <ul>
-                        <li>Estimates daily calorie needs based on various factors.</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>🔐 User Authentication</h4>
-                    <ul>
-                        <li>Secure login and registration for personalized experience.</li>
-                    </ul>
+
+            <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Overview</h3>
+            <p style="font-size:1.18rem; line-height:1.7;">The Text to Speech Configurator is a Python application that
+                converts text into speech with customizable settings. It features a graphical user interface (GUI) built
+                using Tkinter and utilizes the pyttsx3 library for text-to-speech conversion. This project provides
+                users with the ability to adjust volume, speech rate, and select different voices for a personalized
+                listening experience.</p>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Key Features</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>📝 Text Input</h4>
+                        <ul>
+                            <li>Users can input or paste text into the provided text box</li>
+                            <li>Support for large text blocks and multiple paragraphs</li>
+                            <li>Easy text editing and modification capabilities</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔊 Volume Control</h4>
+                        <ul>
+                            <li>Adjust the volume of the speech output using an intuitive slider</li>
+                            <li>Real-time volume adjustment during speech playback</li>
+                            <li>Precise volume control from 0% to 100%</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⚡ Rate Control</h4>
+                        <ul>
+                            <li>Set the speech rate in words per minute (wpm) using a slider</li>
+                            <li>Customizable speed for different reading preferences</li>
+                            <li>Range from slow to fast speech rates</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎭 Voice Selection</h4>
+                        <ul>
+                            <li>Choose from available voices installed on the system</li>
+                            <li>Support for multiple language voices</li>
+                            <li>Male and female voice options</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>▶️ Speak Button</h4>
+                        <ul>
+                            <li>Trigger the text-to-speech conversion with a single click</li>
+                            <li>Instant speech generation with current settings</li>
+                            <li>User-friendly interface for easy operation</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💾 Settings Persistence</h4>
+                        <ul>
+                            <li>Remember user preferences for future sessions</li>
+                            <li>Save and load custom voice configurations</li>
+                            <li>Consistent user experience across sessions</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">💻 Technologies Used</h3>
-            <div class="tech-slider">
-                <div class="tech-track">
-                    <div class="tech-card">HTML</div>
-                    <div class="tech-card">CSS</div>
-                    <div class="tech-card">JavaScript</div>
-                    <div class="tech-card">Python</div>
-                    <div class="tech-card">Flask</div>
-                    <div class="tech-card">MySQL</div>
-                    <div class="tech-card">Machine Learning Models</div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">How It Works</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>1. Text Input</h4>
+                        <p>Users enter or paste their desired text into the application's text input area</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>2. Voice Configuration</h4>
+                        <p>Select preferred voice, adjust volume and speech rate using the control sliders</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>3. Speech Generation</h4>
+                        <p>Click the speak button to convert text to speech using the pyttsx3 engine</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>4. Audio Output</h4>
+                        <p>Listen to the generated speech with the configured voice and settings</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>5. Real-time Adjustment</h4>
+                        <p>Modify settings during playback for immediate feedback and customization</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>6. Settings Save</h4>
+                        <p>Application remembers user preferences for consistent experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Technology Stack</h3>
+                <h4 style="color:#7ec4ff; margin-bottom:6px; margin-top:18px;">Core Technologies</h4>
+                <div class="tech-slider">
+                    <div class="tech-track">
+                        <div class="tech-card">Python 3.x</div>
+                        <div class="tech-card">Tkinter</div>
+                        <div class="tech-card">pyttsx3</div>
+                        <div class="tech-card">GUI Development</div>
+                    </div>
+                </div>
+                <h4 style="color:#7ec4ff; margin-bottom:6px; margin-top:18px;">Features & Libraries</h4>
+                <div class="tech-slider">
+                    <div class="tech-track">
+                        <div class="tech-card">Text Processing</div>
+                        <div class="tech-card">Audio Generation</div>
+                        <div class="tech-card">Voice Synthesis</div>
+                        <div class="tech-card">User Interface</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Installation & Usage</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>📥 Installation Steps</h4>
+                        <ul>
+                            <li>Clone the repository from GitHub</li>
+                            <li>Navigate to the project directory</li>
+                            <li>Install required dependencies using pip</li>
+                            <li>Run the application using Python</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 Requirements</h4>
+                        <ul>
+                            <li>Python 3.x (latest version recommended)</li>
+                            <li>Tkinter library (included with Python)</li>
+                            <li>pyttsx3 library for text-to-speech</li>
+                            <li>Audio output device for speech playback</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💻 Command Line Usage</h4>
+                        <ul>
+                            <li>git clone [repository-url]</li>
+                            <li>cd Text-to-Speech-Configurator</li>
+                            <li>pip install -r requirements.txt</li>
+                            <li>python main.py</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Code Architecture</h3>
+                <p style="font-size:1.18rem; line-height:1.7;">The application is built with a clean, modular
+                    architecture. The main.py file contains the core application logic, utilizing Tkinter for the GUI
+                    framework and pyttsx3 for text-to-speech conversion. The code is structured to separate UI
+                    components from speech processing logic, making it maintainable and extensible.</p>
+
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>🏗️ GUI Components</h4>
+                        <p>Tkinter-based interface with text input, sliders, dropdown menus, and control buttons</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔊 Speech Engine</h4>
+                        <p>pyttsx3 engine initialization and voice management for text-to-speech conversion</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⚙️ Settings Management</h4>
+                        <p>Configuration handling for volume, rate, and voice selection with persistence</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Use Cases</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>📚 Accessibility</h4>
+                        <p>Assist users with visual impairments or reading difficulties by converting text to audio</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎓 Learning & Education</h4>
+                        <p>Help students learn pronunciation and improve language skills through audio feedback</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📖 Content Consumption</h4>
+                        <p>Convert articles, documents, and e-books into audio format for hands-free listening</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 Development Testing</h4>
+                        <p>Test text-to-speech functionality in applications and verify voice quality</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Future Enhancements</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>🌐 Multi-language Support</h4>
+                        <p>Add support for multiple languages and regional voice options</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💾 File Import/Export</h4>
+                        <p>Enable importing text from files and exporting audio to various formats</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎵 Audio Customization</h4>
+                        <p>Add pitch control, emphasis, and advanced audio effects</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>☁️ Cloud Integration</h4>
+                        <p>Integrate with cloud-based TTS services for enhanced voice quality</p>
+                    </div>
                 </div>
             </div>
         </section>
