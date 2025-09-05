@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project || Rakshit Gupta</title>
+    <title>RPA Project - Daily Cryptocurrency Reports | Rakshit Gupta</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/png" href="../assets/icon.png">
@@ -49,100 +49,190 @@
     </nav>
     <main class="container">
         <section class="project-detail">
-            <h2 style="font-size:2.5rem; margin-bottom:18px;">🚗 Smart IoT-Based Parking Management System Using
-                ESP32-CAM
-                and Custom ANPR Model</h2>
-            <a href="https://github.com/Rakshitgupta9/Smart-Parking-Management" target="_blank" rel="noopener"
-                class="download-btn" style="margin-bottom: 28px; display: inline-block; font-size: 1.1rem;">View on
-                GitHub <i class="fab fa-github"></i></a>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">📋 Project Overview</h3>
-            <p style="font-size:1.18rem; line-height:1.7;">The Smart Parking Management project is an IoT-based solution
-                designed to automate vehicle parking processes using the ESP32-CAM module and Automatic Number Plate
-                Recognition (ANPR). The system captures vehicle images, sends them to a local server for number plate
-                recognition, and controls access using IR sensors and a servo motor. A web interface provides real-time
-                status updates, including time, system status, and recognized number plates. The project integrates
-                hardware (ESP32-CAM, IR sensors, servo motor, flashlight) and software (ANPR model, local server) to
-                create an efficient parking management system suitable for small-scale parking lots.</p>
-            <p style="font-size:1.18rem; line-height:1.7;">This repository contains all the code, documentation, and
-                resources needed to replicate the project, including ESP32 firmware, server-side code, ANPR model,
-                testing scripts, and circuit diagrams.</p>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">🔧 Key Components</h3>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <h4>📷 ESP32-CAM</h4>
-                    <ul>
-                        <li>Microcontroller with OV2640 camera module</li>
-                        <li>Captures vehicle images</li>
-                        <li>Hosts web server for status monitoring</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>🔍 IR Sensors</h4>
-                    <ul>
-                        <li>Two infrared sensors for entry (GPIO 16) and exit (GPIO 15)</li>
-                        <li>Detect vehicle movement</li>
-                        <li>Trigger image capture and servo actions</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>⚙️ Servo Motor</h4>
-                    <ul>
-                        <li>Controls gate mechanism</li>
-                        <li>Toggles between 0Â° and 90Â° based on entry IR sensor</li>
-                        <li>Connected to GPIO 14</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>💡 Flashlight</h4>
-                    <ul>
-                        <li>LED on GPIO 4</li>
-                        <li>Illuminates scene during image capture</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>🖥️ Local Server</h4>
-                    <ul>
-                        <li>Flask-based server (192.168.29.56:5000/upload)</li>
-                        <li>Processes images and performs ANPR</li>
-                        <li>Returns JSON with number plate and image URL</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>🤖 ANPR Model</h4>
-                    <ul>
-                        <li>Jupyter Notebook (anpr.ipynb)</li>
-                        <li>Implements Automatic Number Plate Recognition</li>
-                        <li>Uses computer vision techniques</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h4>🌐 Web Interface</h4>
-                    <ul>
-                        <li>HTML interface served by ESP32-CAM</li>
-                        <li>Displays real-time system status, time, last event, and captured images</li>
-                    </ul>
+            <h2 style="font-size:2.5rem; margin-bottom:18px;">🤖 RPA Project - Daily Cryptocurrency Reports</h2>
+            <a href="https://github.com/Rakshitgupta9/RPA-Project" target="_blank" rel="noopener" class="download-btn"
+                style="margin-bottom: 28px; display: inline-block; font-size: 1.1rem;">View on GitHub <i
+                    class="fab fa-github"></i></a>
+
+            <a href="https://drive.google.com/file/d/1JEZU2RtIg9oi3ktz6wQarusOffr5y9fk/view?usp=sharing" target="_blank"
+                rel="noopener" class="download-btn"
+                style="margin-bottom: 28px; display: inline-block; font-size: 1.1rem; margin-left: 12px;">Watch Demo <i
+                    class="fas fa-play"></i></a>
+
+            <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Overview</h3>
+            <p style="font-size:1.18rem; line-height:1.7;">The RPA (Robotic Process Automation) project involves the
+                creation of an automation bot for cryptocurrency updates. The bot scrapes daily cryptocurrency data,
+                transforms it into an Excel format, and sends the updates to subscribed users via email. This project
+                enhances accessibility and convenience for users interested in receiving timely and organized
+                cryptocurrency information.</p>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Key Features</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>📊 Automated Data Scraping</h4>
+                        <ul>
+                            <li>Daily extraction of cryptocurrency market data</li>
+                            <li>Real-time price monitoring and tracking</li>
+                            <li>Automated data collection from multiple sources</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 Excel Report Generation</h4>
+                        <ul>
+                            <li>Automatic transformation of raw data into Excel format</li>
+                            <li>Structured reports with charts and visualizations</li>
+                            <li>Professional formatting and data organization</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📧 Automated Email Distribution</h4>
+                        <ul>
+                            <li>Daily email reports sent to subscribed users</li>
+                            <li>Personalized email content with market insights</li>
+                            <li>Scheduled delivery at optimal times</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⏰ Scheduled Automation</h4>
+                        <ul>
+                            <li>Daily automated execution without manual intervention</li>
+                            <li>Reliable and consistent report delivery</li>
+                            <li>Error handling and retry mechanisms</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📱 User Subscription Management</h4>
+                        <ul>
+                            <li>Easy subscription and unsubscription process</li>
+                            <li>User preference management</li>
+                            <li>Customizable report frequency and content</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔍 Market Analysis</h4>
+                        <ul>
+                            <li>Comprehensive cryptocurrency market analysis</li>
+                            <li>Trend identification and price predictions</li>
+                            <li>Historical data comparison and insights</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">⚡ Components</h3>
-            <div class="tech-slider">
-                <div class="tech-track">
-                    <div class="tech-card">ESP32-CAM</div>
-                    <div class="tech-card">IR Sensors</div>
-                    <div class="tech-card">Servo Motor</div>
-                    <div class="tech-card">Flashlight</div>
-                    <div class="tech-card">Breadboard</div>
-                    <div class="tech-card">Jumper wires</div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">How It Works</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>1. Data Collection</h4>
+                        <p>RPA bot automatically scrapes cryptocurrency data from various reliable sources and APIs</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>2. Data Processing</h4>
+                        <p>Raw data is cleaned, processed, and analyzed to extract meaningful insights and trends</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>3. Report Generation</h4>
+                        <p>Processed data is formatted into professional Excel reports with charts and visualizations
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>4. Email Distribution</h4>
+                        <p>Reports are automatically sent to all subscribed users via email with personalized content
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>5. Monitoring & Logging</h4>
+                        <p>System monitors execution, logs activities, and handles any errors or exceptions</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>6. User Management</h4>
+                        <p>Manages user subscriptions, preferences, and provides support for customization</p>
+                    </div>
                 </div>
             </div>
-            <h3 style="color:#7ec4ff; font-size:1.5rem; margin:32px 0 10px 0;">💻 Tech Stack</h3>
-            <div class="tech-slider">
-                <div class="tech-track">
-                    <div class="tech-card">Python</div>
-                    <div class="tech-card">OpenCV</div>
-                    <div class="tech-card">Arduino IDE</div>
-                    <div class="tech-card">Cloud Server</div>
-                    <div class="tech-card">ANPR Jupyter Notebook</div>
-                    <div class="tech-card">MongoDB</div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Technology Stack</h3>
+                <h4 style="color:#7ec4ff; margin-bottom:6px; margin-top:18px;">RPA & Automation</h4>
+                <div class="tech-slider">
+                    <div class="tech-track">
+                        <div class="tech-card">UiPath</div>
+                        <div class="tech-card">RPA Studio</div>
+                        <div class="tech-card">Automation Workflows</div>
+                        <div class="tech-card">Scheduled Tasks</div>
+                    </div>
+                </div>
+                <h4 style="color:#7ec4ff; margin-bottom:6px; margin-top:18px;">Data Processing & Analysis</h4>
+                <div class="tech-slider">
+                    <div class="tech-track">
+                        <div class="tech-card">Excel Automation</div>
+                        <div class="tech-card">Data Scraping</div>
+                        <div class="tech-card">API Integration</div>
+                        <div class="tech-card">Data Transformation</div>
+                    </div>
+                </div>
+                <h4 style="color:#7ec4ff; margin-bottom:6px; margin-top:18px;">Communication & Delivery</h4>
+                <div class="tech-slider">
+                    <div class="tech-track">
+                        <div class="tech-card">Email Automation</div>
+                        <div class="tech-card">SMTP Integration</div>
+                        <div class="tech-card">Report Templates</div>
+                        <div class="tech-card">User Management</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Project Benefits</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>⏱️ Time Efficiency</h4>
+                        <p>Eliminates manual data collection and report generation, saving hours of daily work</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Consistent Quality</h4>
+                        <p>Ensures consistent, accurate, and professional reports delivered on time every day</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💰 Cost Effective</h4>
+                        <p>Reduces operational costs by automating repetitive tasks and minimizing human intervention
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 Scalability</h4>
+                        <p>Easily scalable to handle more users, cryptocurrencies, and report customization</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Use Cases</h3>
+                <p style="font-size:1.18rem; line-height:1.7;">This RPA solution is perfect for cryptocurrency
+                    enthusiasts, traders, financial analysts, and businesses that need regular market updates. It can be
+                    customized for different user groups, from individual investors tracking their portfolios to
+                    financial institutions requiring comprehensive market reports.</p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color:#7ec4ff; font-size:1.5rem; margin-bottom:10px;">Future Enhancements</h3>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <h4>🔔 Real-time Alerts</h4>
+                        <p>Integration of price alerts and notification system for significant market movements</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📱 Mobile App Integration</h4>
+                        <p>Development of mobile application for on-the-go access to cryptocurrency reports</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🤖 AI-Powered Insights</h4>
+                        <p>Integration of machine learning algorithms for advanced market predictions and analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🌐 Multi-language Support</h4>
+                        <p>Support for multiple languages and regional market data for global users</p>
+                    </div>
                 </div>
             </div>
         </section>

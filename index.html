@@ -45,6 +45,50 @@
                     </div>
                 </li>
             </ul>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" tabindex="0">
+                <span>See More</span>
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <!-- Mobile Menu Dropdown -->
+            <div class="mobile-menu-dropdown">
+                <a class="mobile-menu-link" href="index.html">
+                    <i class="fas fa-home"></i>
+                    About
+                </a>
+                <a class="mobile-menu-link" href="pages/projects.html">
+                    <i class="fas fa-code"></i>
+                    Projects
+                </a>
+                <a class="mobile-menu-link" href="pages/resume.html">
+                    <i class="fas fa-file-alt"></i>
+                    Resume
+                </a>
+                <div class="mobile-submenu-container">
+                    <button class="mobile-submenu-btn" tabindex="0">
+                        <i class="fas fa-share-alt"></i>
+                        Social
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                    <div class="mobile-submenu-dropdown">
+                        <a class="mobile-submenu-link" href="https://github.com/Rakshitgupta9" target="_blank" rel="noopener">
+                            GitHub
+                        </a>
+                        <a class="mobile-submenu-link" href="https://leetcode.com/u/rakshitgupta9/" target="_blank" rel="noopener">
+                            LeetCode
+                        </a>
+                        <a class="mobile-submenu-link" href="mailto:guptarakshit9858@gmail.com" target="_blank" rel="noopener">
+                            Mail
+                        </a>
+                        <a class="mobile-submenu-link" href="https://www.linkedin.com/in/rakshit9/" target="_blank" rel="noopener">
+                            LinkedIn
+                        </a>
+                        <a class="mobile-submenu-link" href="https://www.instagram.com/rakshit9_/" target="_blank" rel="noopener">
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <header>
@@ -79,20 +123,26 @@
 
         <section class="stats-section">
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-code"></i>
+                <a href="pages/projects.html" style="text-decoration: none;">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects Completed</div>
                     </div>
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-briefcase"></i>
+                 </a>
+
+                <a href="#internships-section" style="text-decoration: none;">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Internships</div>
                     </div>
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Internships</div>
-                </div>
+                </a>
+
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-graduation-cap"></i>
@@ -184,7 +234,7 @@
         </section>
 
 
-        <section class="internships-section">
+        <section class="internships-section" id="internships-section">
             <h2>Internships</h2>
             <div class="feature-cards">
                 <div class="feature-card">
@@ -243,24 +293,52 @@
         <section class="certifications-section">
             <h2>Certifications</h2>
             <div class="feature-cards">
+
                 <div class="feature-card">
-                    <h4>Explore ML with Crowdsource - Beginner Track</h4>
-                    <div class="certification-issuer">Google</div>
+                    <a href="docs/certificates/1.pdf" style="text-decoration: none;" target="_blank">
+                        <h4>Explore ML with Crowdsource - Beginner Track</h4>
+                        <div class="certification-issuer">Google</div>
+                    </a>
                 </div>
+
                 <div class="feature-card">
-                    <h4>Basics of Python</h4>
-                    <div class="certification-issuer">Coursera</div>
+                    <a href="docs/certificates/2.pdf" style="text-decoration: none;" target="_blank">
+                        <h4>Basics of Python</h4>
+                        <div class="certification-issuer">Coursera</div>
+                    </a>
                 </div>
+
                 <div class="feature-card">
-                    <h4>Responsive Web Design</h4>
-                    <div class="certification-issuer">freeCodeCamp</div>
+                    <a href="docs/certificates/3.pdf" style="text-decoration: none;" target="_blank">
+                        <h4>Problem Solving Aspects and Python Programming</h4>
+                        <div class="certification-issuer">Swayam</div>
+                    </a>
                 </div>
+
                 <div class="feature-card">
-                    <h4>Problem Solving Aspects and Python Programming</h4>
-                    <div class="certification-issuer">Swayam</div>
+                    <a href="docs/certificates/4.pdf" style="text-decoration: none;" target="_blank">
+                        <h4>Python for Computer Vision with OpenCV and Deep Learning</h4>
+                        <div class="certification-issuer">Swayam</div>
+                    </a>
                 </div>
+
+                <div class="feature-card">
+                    <a href="docs/certificates/5.pdf" style="text-decoration: none;" target="_blank">
+                        <h4>Responsive Web Design</h4>
+                        <div class="certification-issuer">freeCodeCamp</div>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <a href="docs/certificates/6.pdf" style="text-decoration: none;" target="_blank">
+                        <h4>JavaScript Algorithms and Data Structures</h4>
+                        <div class="certification-issuer">Swayam</div>
+                    </a>
+                </div>
+
             </div>
         </section>
+
 
         <section class="resume-download-section">
             <h2>Download Resume</h2>
@@ -348,6 +426,108 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+        const mobileSubmenuBtn = document.querySelector('.mobile-submenu-btn');
+        const mobileSubmenuDropdown = document.querySelector('.mobile-submenu-dropdown');
+        
+        if (mobileMenuBtn && mobileMenuDropdown) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const isVisible = mobileMenuDropdown.style.opacity === '1';
+                
+                if (isVisible) {
+                    mobileMenuDropdown.style.opacity = '0';
+                    mobileMenuDropdown.style.visibility = 'hidden';
+                    mobileMenuDropdown.style.transform = 'translateY(-10px)';
+                    // Close submenu when main menu closes
+                    if (mobileSubmenuDropdown) {
+                        mobileSubmenuDropdown.style.opacity = '0';
+                        mobileSubmenuDropdown.style.visibility = 'hidden';
+                        mobileSubmenuDropdown.style.transform = 'translateX(-10px)';
+                        mobileSubmenuBtn.classList.remove('active');
+                    }
+                } else {
+                    mobileMenuDropdown.style.opacity = '1';
+                    mobileMenuDropdown.style.visibility = 'visible';
+                    mobileMenuDropdown.style.transform = 'translateY(0)';
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenuBtn.contains(e.target) && !mobileMenuDropdown.contains(e.target)) {
+                    mobileMenuDropdown.style.opacity = '0';
+                    mobileMenuDropdown.style.visibility = 'hidden';
+                    mobileMenuDropdown.style.transform = 'translateY(-10px)';
+                    // Close submenu when main menu closes
+                    if (mobileSubmenuDropdown) {
+                        mobileSubmenuDropdown.style.opacity = '0';
+                        mobileSubmenuDropdown.style.visibility = 'hidden';
+                        mobileSubmenuDropdown.style.transform = 'translateX(-10px)';
+                        mobileSubmenuBtn.classList.remove('active');
+                    }
+                }
+            });
+
+            // Close mobile menu when clicking on a main link
+            mobileMenuDropdown.addEventListener('click', function(e) {
+                if (e.target.classList.contains('mobile-menu-link')) {
+                    mobileMenuDropdown.style.opacity = '0';
+                    mobileMenuDropdown.style.visibility = 'hidden';
+                    mobileMenuDropdown.style.transform = 'translateY(-10px)';
+                    // Close submenu when main menu closes
+                    if (mobileSubmenuDropdown) {
+                        mobileSubmenuDropdown.style.opacity = '0';
+                        mobileSubmenuDropdown.style.visibility = 'hidden';
+                        mobileSubmenuDropdown.style.transform = 'translateX(-10px)';
+                        mobileSubmenuBtn.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        // Mobile submenu functionality
+        if (mobileSubmenuBtn && mobileSubmenuDropdown) {
+            mobileSubmenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const isVisible = mobileSubmenuDropdown.style.opacity === '1';
+                
+                if (isVisible) {
+                    mobileSubmenuDropdown.style.opacity = '0';
+                    mobileSubmenuDropdown.style.visibility = 'hidden';
+                    mobileSubmenuDropdown.style.transform = 'translateX(-10px)';
+                    mobileSubmenuBtn.classList.remove('active');
+                } else {
+                    mobileSubmenuDropdown.style.opacity = '1';
+                    mobileSubmenuDropdown.style.visibility = 'visible';
+                    mobileSubmenuDropdown.style.transform = 'translateX(0)';
+                    mobileSubmenuBtn.classList.add('active');
+                }
+            });
+
+            // Close submenu when clicking on a submenu link
+            mobileSubmenuDropdown.addEventListener('click', function(e) {
+                if (e.target.classList.contains('mobile-submenu-link')) {
+                    mobileSubmenuDropdown.style.opacity = '0';
+                    mobileSubmenuDropdown.style.visibility = 'hidden';
+                    mobileSubmenuDropdown.style.transform = 'translateX(-10px)';
+                    mobileSubmenuBtn.classList.remove('active');
+                    // Also close main menu
+                    if (mobileMenuDropdown) {
+                        mobileMenuDropdown.style.opacity = '0';
+                        mobileMenuDropdown.style.visibility = 'hidden';
+                        mobileMenuDropdown.style.transform = 'translateY(-10px)';
+                    }
+                }
+            });
+        }
     </script>
 </body>
 
